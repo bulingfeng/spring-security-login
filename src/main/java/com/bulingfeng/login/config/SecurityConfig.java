@@ -32,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	private ObjectMapper objectMapper;
 
-	public SecurityConfig(MyPasswordEncoder myPasswordEncoder, CustomUserService myCustomUserService, ObjectMapper objectMapper) {
+	public SecurityConfig(CustomUserService myCustomUserService, ObjectMapper objectMapper) {
 		this.myPasswordEncoder =new BCryptPasswordEncoder();
 		this.myCustomUserService = myCustomUserService;
 		this.objectMapper = objectMapper;
